@@ -1,11 +1,12 @@
 package com.in28minutes.spring.basics.springin5steps;
 
+import com.in28minutes.spring.basics.springin5steps.basic.BinarySearchImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class SpringIn5StepsApplication {
+public class SpringIn5StepsBasicApplication {
     /*
     Para un mejor uso de Spring, necesitamos especificar 3 cosas
     1- Cuáles son los beans?
@@ -34,7 +35,7 @@ public class SpringIn5StepsApplication {
         session - One bean per HTTP session
          */
 
-        ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsApplication.class, args);
+        ApplicationContext applicationContext = SpringApplication.run(SpringIn5StepsBasicApplication.class, args);
 
         BinarySearchImpl binarySearch = applicationContext.getBean(BinarySearchImpl.class);
         BinarySearchImpl binarySearch1 = applicationContext.getBean(BinarySearchImpl.class);

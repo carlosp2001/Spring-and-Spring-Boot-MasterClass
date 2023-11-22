@@ -1,4 +1,4 @@
-package com.in28minutes.spring.basics.springin5steps;
+package com.in28minutes.spring.basics.springin5steps.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -38,7 +38,7 @@ public class BinarySearchImpl {
         this.sortAlgorithm = sortAlgorithm;
     }
 
-    public int binarySearch(int[] numbers, int numberToSearchFor)  {
+    public int binarySearch(int[] numbers, int numberToSearchFor) {
         // Bubble Sort algorithm
 //        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
 //        bubbleSortAlgorithm.sort(numbers);
