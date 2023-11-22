@@ -5,11 +5,23 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
-    @Autowired
-    private SortAlgorithm sortAlgorithm;
 
-    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
+    // Al no haber especificado ningún bean con @Primary podemos realizar la inyección
+    // de la dependencia por medio de búsqueda por nombre
+    @Autowired
+    private SortAlgorithm bubbleSortAlgorithm;
+
+//    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
+//        super();
+//        this.sortAlgorithm = sortAlgorithm;
+//    }
+
+    // Implementando setter injection
+    // Si es una dependencia opcional es preferible utilizar setter injection, si es una
+    // dependencia obligatoria es mucho mejor utilizar el constructor
+
+    public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
+        this.bubbleSortAlgorithm = sortAlgorithm;
     }
 
     public int binarySearch(int[] numbers, int numberToSearchFor)  {
@@ -17,8 +29,8 @@ public class BinarySearchImpl {
 //        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
 //        bubbleSortAlgorithm.sort(numbers);
 
-        int[] sortedNumbers = sortAlgorithm.sort(numbers);
-        System.out.println(sortAlgorithm);
+        int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
+        System.out.println(bubbleSortAlgorithm);
 
         // Search the array
 
