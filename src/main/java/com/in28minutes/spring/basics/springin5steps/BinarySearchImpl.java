@@ -2,9 +2,14 @@ package com.in28minutes.spring.basics.springin5steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+//@Scope("prototype") // Especificamos el alcance prototipo, esto nos permite poder crear diferentes instacias del bean,
+// cada vez que requerimos una instancia
+@Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE) // Forma correcta de especificar el alcance
 public class BinarySearchImpl {
 
     // 1- Forma haciendo uso de búsqueda por nombre
