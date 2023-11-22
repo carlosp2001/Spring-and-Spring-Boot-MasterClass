@@ -1,15 +1,24 @@
 package com.in28minutes.spring.basics.springin5steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BinarySearchImpl {
 
+    // 1- Forma haciendo uso de búsqueda por nombre
+
     // Al no haber especificado ningún bean con @Primary podemos realizar la inyección
     // de la dependencia por medio de búsqueda por nombre
+//    @Autowired
+//    private SortAlgorithm bubbleSortAlgorithm;
+
+    // 2 - Forma haciendo uso de @qualifier, @qualifier busca en las clases por un bean que contenga
+    // esta etiqueta
     @Autowired
-    private SortAlgorithm bubbleSortAlgorithm;
+    @Qualifier("quick")
+    private SortAlgorithm sortAlgorithm;
 
 //    public BinarySearchImpl(SortAlgorithm sortAlgorithm) {
 //        super();
@@ -21,7 +30,7 @@ public class BinarySearchImpl {
     // dependencia obligatoria es mucho mejor utilizar el constructor
 
     public void setSortAlgorithm(SortAlgorithm sortAlgorithm) {
-        this.bubbleSortAlgorithm = sortAlgorithm;
+        this.sortAlgorithm = sortAlgorithm;
     }
 
     public int binarySearch(int[] numbers, int numberToSearchFor)  {
@@ -29,8 +38,8 @@ public class BinarySearchImpl {
 //        BubbleSortAlgorithm bubbleSortAlgorithm = new BubbleSortAlgorithm();
 //        bubbleSortAlgorithm.sort(numbers);
 
-        int[] sortedNumbers = bubbleSortAlgorithm.sort(numbers);
-        System.out.println(bubbleSortAlgorithm);
+        int[] sortedNumbers = sortAlgorithm.sort(numbers);
+        System.out.println(sortAlgorithm);
 
         // Search the array
 
