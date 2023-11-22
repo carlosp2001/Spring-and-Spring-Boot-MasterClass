@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="xmlJdbcConnection" class="com.in28minutes.spring.basics.springin5steps.xml.XmlJdbcConnection">
+
+    </bean>
+
+    <bean id="xmlPersonDAO" class="com.in28minutes.spring.basics.springin5steps.xml.XmlPersonDAO">
+<!--        Esta es la forma de definir el contexto de la aplicación por medio de un archivo xml-->
+<!--        Aqui se define la dependencia entre beans-->
+        <property name="xmlJdbcConnection" ref="xmlJdbcConnection"/>
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
