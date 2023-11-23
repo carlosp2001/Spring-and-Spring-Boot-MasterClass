@@ -12,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 // Se carga el contexto para poder correr y buscar los beans necesarios
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(classes = SpringIn5StepsBasicApplication.class)
+//@ContextConfiguration(locations = "/applicationContext.xml")
 class BinarySearchImplTest {
     // Get this bean from context
     @Autowired
