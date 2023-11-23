@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SomeBusinessImplTest {
+class SomeBusinessImplStubTest {
     @Test
     void findTheGreatestFromAllData_basicScenario() {
         DataService dataService = new DataServiceStub1();
