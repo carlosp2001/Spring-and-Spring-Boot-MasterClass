@@ -1,4 +1,4 @@
-package com.example.springjdbcjpa.jdbc;
+package jdbc;
 
 import com.example.springjdbcjpa.entity.Person;
 import org.springframework.beans.factory.annotation.Autowired;

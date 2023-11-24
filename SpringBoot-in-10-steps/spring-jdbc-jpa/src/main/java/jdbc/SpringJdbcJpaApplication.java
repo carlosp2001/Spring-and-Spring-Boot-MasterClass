@@ -1,24 +1,19 @@
-package com.example.springjdbcjpa;
+package jdbc;//package com.example.springjdbcjpa;
 
 import com.example.springjdbcjpa.entity.Person;
-import com.example.springjdbcjpa.jdbc.PersonJdbcDao;
 import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.jdbc.core.RowMapper;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.Date;
 
 @SpringBootApplication
 public class SpringJdbcJpaApplication implements CommandLineRunner {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    @Autowired
+//    @Autowired
     PersonJdbcDao dao;
 
     public static void main(String[] args) {

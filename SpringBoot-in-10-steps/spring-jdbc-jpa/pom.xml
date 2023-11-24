@@ -45,6 +45,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0</version> <!-- Puedes ajustar la versión según tus necesidades -->
+            <scope>provided</scope> <!-- Especifica "provided" para indicar que la implementación será proporcionada en tiempo de ejecución -->
+        </dependency>
 
     </dependencies>
 
