@@ -1,9 +1,17 @@
 package com.example.springjdbcjpa.entity;
 
+import jakarta.persistence.*;
+
 import java.util.Date;
 
+
+@Entity // Definiendo una entidad con JPA
+@Table(name="person")
 public class Person {
+    @Id
+    @GeneratedValue
     private int id;
+//    @Column(name = "name") // En el caso que el nombre no sea igual en la tabla se debe especificar
     private String name;
     private String location;
     private Date birthDate;
@@ -12,6 +20,14 @@ public class Person {
     }
 
     public Person(int id, String name, String location, Date birthDate) {
+        super();
+        this.id = id;
+        this.name = name;
+        this.location = location;
+        this.birthDate = birthDate;
+    }
+
+    public Person(String name, String location, Date birthDate) {
         super();
         this.id = id;
         this.name = name;
