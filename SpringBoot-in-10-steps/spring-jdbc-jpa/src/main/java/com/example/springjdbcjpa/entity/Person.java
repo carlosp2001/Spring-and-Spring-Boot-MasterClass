@@ -6,6 +6,7 @@ import java.util.Date;
 
 
 @Entity // Definiendo una entidad con JPA
+@NamedQuery(name="find_all_persons", query="select p from Person p")
 @Table(name="person")
 public class Person {
     @Id
