@@ -5,13 +5,17 @@ import java.util.Date;
 public class Person {
     private int id;
     private String name;
-    private String Location;
+    private String location;
     private Date birthDate;
+    public Person() {
+
+    }
 
     public Person(int id, String name, String location, Date birthDate) {
+        super();
         this.id = id;
         this.name = name;
-        Location = location;
+        this.location = location;
         this.birthDate = birthDate;
     }
 
@@ -32,11 +36,11 @@ public class Person {
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
     public void setLocation(String location) {
-        Location = location;
+        this.location = location;
     }
 
     public Date getBirthDate() {
@@ -45,5 +49,15 @@ public class Person {
 
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", birthDate=" + birthDate +
+                '}';
     }
 }
