@@ -1,5 +1,6 @@
-package com.in28minutes.jee.springmvc;
+package com.in28minutes.login;
 
+import com.in28minutes.login.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
+    LoginService loginService = new LoginService();
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     // @ResponseBody responseBody solo funciona si queremos que el texto se muestre literalmente
@@ -20,8 +22,13 @@ public class LoginController {
     public String handleLoginRequest(@RequestParam String name,
                                      @RequestParam String password,
                                      ModelMap model) {
-        model.put("name", name);
-        model.put("password", password);
-        return "welcome";
+        if (loginService.validateUser(name, password)) {
+            model.put("name", name);
+            model.put("password", password);
+            return "welcome";
+        }
+        model.put("errorMessage", "Invalid Credentials");
+        return "login";
+
     }
 }
