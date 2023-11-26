@@ -1,0 +1,10 @@
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:01:50 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-1 95
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:01:53 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-3 3
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:02:07 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-1 86
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:02:08 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-3 2
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:02:09 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-4 3
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:02:11 -0600] "GET /spring-mvc/login HTTP/1.1" 200 286 http-bio-8080-exec-5 3
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:02:11 -0600] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-6 3
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:06:30 -0600] "POST /login.do HTTP/1.1" 200 307 http-bio-8080-exec-8 5
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:07:45 -0600] "POST /login.do HTTP/1.1" 200 87 http-bio-8080-exec-1 46
+0:0:0:0:0:0:0:1 - - [26/Nov/2023:11:11:58 -0600] "GET / HTTP/1.1" 200 286 http-bio-8080-exec-5 2

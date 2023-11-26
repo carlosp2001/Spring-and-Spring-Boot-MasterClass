@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class LoginController {
 
     @RequestMapping(value="/login")
-    @ResponseBody
+    // @ResponseBody responseBody solo funciona si queremos que el texto se muestre literalmente
+    // para mostrar una vista solo debemos colocar el nombre de la vista
     public String sayHello() {
-        return "Hello World";
+        return "login";
     }
 }
